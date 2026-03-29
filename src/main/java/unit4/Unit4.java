@@ -9,6 +9,9 @@ public class Unit4 {
         System.out.println("sumNumbers(5) = " + unit.sumNumbers(5));  // Expected: 15
     }
 
+  
+
+    
     /**
      * Calculates the sum of all integers from 1 to n (inclusive).
      * If n is 0 or negative, returns 0.
@@ -30,9 +33,18 @@ public class Unit4 {
      */
     public int sumNumbers(int n) {
         // TODO: Implement this method
-        return 0;
-    }
+             if(n<= 0){
+            return 0;
+        }
+        int sum = 0;
+        for(int i=1; i<= n; i++){
+            sum += 1;
 
+        }
+
+        return sum;
+    }
+  
     /**
      * Returns a new String consisting of the given string repeated n times.
      * If n is 0 or the string is empty, returns an empty string.
@@ -55,7 +67,14 @@ public class Unit4 {
      */
     public String repeatString(String str, int n) {
         // TODO: Implement this method
-        return "";
+        if( n== 0 || str.equals("")){
+            return "";
+        }
+        String result = "";
+        for(int =0; i<n; i++){
+            result += str;
+        }
+return results;
     }
 
     /**
@@ -79,7 +98,12 @@ public class Unit4 {
      */
     public int findFactorial(int n) {
         // TODO: Implement this method
-        return 0;
+            int result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
     }
 
     /**
@@ -102,10 +126,17 @@ public class Unit4 {
      * @return the number of vowels found
      */
     public int countVowels(String str) {
-        // TODO: Implement this method
-        return 0;
-    }
+       int count = 0;
 
+        for (int i = 0; i < str.length(); i++) {
+            char c = Character.toLowerCase(str.charAt(i));
+
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                count++;
+            }
+        }
+        return count;
+    }
     /**
      * Checks if the given string is a palindrome (reads the same forwards
      * and backwards). This check IS case-sensitive, so "RaceCar" is NOT
@@ -129,10 +160,18 @@ public class Unit4 {
      * @return true if the string is a palindrome, false otherwise
      */
     public boolean isPalindrome(String str) {
-        // TODO: Implement this method
-        return false;
-    }
+       int left = 0;
+        int right = str.length() - 1;
 
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
     /**
      * Prints three asterisk patterns using System.out.print() with "\n"
      * for newlines (do NOT use println).
@@ -161,7 +200,26 @@ public class Unit4 {
      */
     public void printAsteriskPatterns(int n) {
         // TODO: Implement this method
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+        }
+        System.out.print("\n");
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
     }
+
 
     /**
      * Prints a multiplication table from 1x1 up to nxn.
@@ -185,5 +243,11 @@ public class Unit4 {
      */
     public void multiplicationTable(int n) {
         // TODO: Implement this method
+         for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                System.out.print((row * col) + "\t");
+            }
+            System.out.print("\n");
+        }
     }
 }
