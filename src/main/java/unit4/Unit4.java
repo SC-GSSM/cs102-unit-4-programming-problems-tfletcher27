@@ -52,7 +52,7 @@ public class Unit4 {
      *   <li>repeatString("hello", 0) returns ""</li>
      * </ul>
      *
-     * <p>Hint: Use a loop to concatenate the string n times.
+     * <p>Hint: Use a loo to concatenate the string n times.
      * Start with an empty String and add to it each iteration.</p>
      *
      * @param str the string to repeat
