@@ -9,9 +9,6 @@ public class Unit4 {
         System.out.println("sumNumbers(5) = " + unit.sumNumbers(5));  // Expected: 15
     }
 
-  
-
-    
     /**
      * Calculates the sum of all integers from 1 to n (inclusive).
      * If n is 0 or negative, returns 0.
@@ -32,19 +29,16 @@ public class Unit4 {
      * @return the sum of integers from 1 to n
      */
     public int sumNumbers(int n) {
-        // TODO: Implement this method
-             if(n<= 0){
+        if(n <= 0){
             return 0;
         }
         int sum = 0;
-        for(int i=1; i<= n; i++){
-            sum += 1;
-
+        for(int i = 1; i <= n; i++){
+            sum += i;
         }
-
         return sum;
     }
-  
+
     /**
      * Returns a new String consisting of the given string repeated n times.
      * If n is 0 or the string is empty, returns an empty string.
@@ -66,15 +60,14 @@ public class Unit4 {
      * @return the repeated string
      */
     public String repeatString(String str, int n) {
-        // TODO: Implement this method
-        if( n== 0 || str.equals("")){
+        if(n == 0 || str.equals("")){
             return "";
         }
         String result = "";
-        for(int =0; i<n; i++){
+        for(int i = 0; i < n; i++){
             result += str;
         }
-return results;
+        return result;
     }
 
     /**
@@ -93,12 +86,11 @@ return results;
      * <p>Hint: Start your result at 1 (not 0!) and multiply by each
      * integer from 1 to n. Think about why starting at 0 would be wrong.</p>
      *
-     * @param n the number to calculate the factorial of (n &gt;= 0)
+     * @param n the number to calculate the factorial of (n >= 0)
      * @return the factorial of n
      */
     public int findFactorial(int n) {
-        // TODO: Implement this method
-            int result = 1;
+        int result = 1;
 
         for (int i = 1; i <= n; i++) {
             result *= i;
@@ -126,7 +118,7 @@ return results;
      * @return the number of vowels found
      */
     public int countVowels(String str) {
-       int count = 0;
+        int count = 0;
 
         for (int i = 0; i < str.length(); i++) {
             char c = Character.toLowerCase(str.charAt(i));
@@ -137,6 +129,7 @@ return results;
         }
         return count;
     }
+
     /**
      * Checks if the given string is a palindrome (reads the same forwards
      * and backwards). This check IS case-sensitive, so "RaceCar" is NOT
@@ -160,7 +153,7 @@ return results;
      * @return true if the string is a palindrome, false otherwise
      */
     public boolean isPalindrome(String str) {
-       int left = 0;
+        int left = 0;
         int right = str.length() - 1;
 
         while (left < right) {
@@ -172,6 +165,7 @@ return results;
         }
         return true;
     }
+
     /**
      * Prints three asterisk patterns using System.out.print() with "\n"
      * for newlines (do NOT use println).
@@ -199,12 +193,13 @@ return results;
      * @param n the size parameter for the patterns
      */
     public void printAsteriskPatterns(int n) {
-        // TODO: Implement this method
+        // Pattern 1
         for (int i = 0; i < n; i++) {
             System.out.print("*");
         }
         System.out.print("\n");
 
+        // Pattern 2
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("*");
@@ -212,6 +207,7 @@ return results;
             System.out.print("\n");
         }
 
+        // Pattern 3
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
@@ -219,7 +215,6 @@ return results;
             System.out.print("\n");
         }
     }
-
 
     /**
      * Prints a multiplication table from 1x1 up to nxn.
@@ -234,7 +229,6 @@ return results;
      * 2	4	6
      * 3	6	9
      * </pre>
-     * <p>(where spaces above represent tab characters)</p>
      *
      * <p>Hint: Use nested for loops. The outer loop controls the row,
      * the inner loop controls the column. Print row * col for each cell.</p>
@@ -242,9 +236,7 @@ return results;
      * @param n the size of the table (n x n)
      */
     public void multiplicationTable(int n) {
-        // TODO: Implement this method
-
-         for (int row = 1; row <= n; row++) {
+        for (int row = 1; row <= n; row++) {
             for (int col = 1; col <= n; col++) {
                 System.out.print((row * col) + "\t");
             }
